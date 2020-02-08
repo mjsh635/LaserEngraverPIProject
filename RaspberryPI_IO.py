@@ -61,7 +61,6 @@ class RPIO:
             self.GPIO.output(22, False)
         print(f"\nadded {float(0.1)*pnt_ones}               ")
 
-
     def get_value(self):
         return NotImplemented
 
