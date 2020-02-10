@@ -94,7 +94,7 @@ class RPIO:
             self.time.sleep(self.relay_settle_time)
             # Toggle relay OFF
             self.GPIO.output(22, False)
-        print(f"added {float(0.1)*pnt_ones}               ")
+        print(f"added {float(0.1)*pnt_ones:.1}               ")
 
     def get_value(self):
         """Return the last set power level
