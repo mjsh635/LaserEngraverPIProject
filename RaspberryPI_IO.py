@@ -89,7 +89,7 @@ class RPIO:
         for _ in range(1,pnt_ones+1):
             # Toggle relay ON
             self.GPIO.output(22, True)
-            print(f"adding {float(0.1) * _}",end='\r')
+            print(f"adding {float(0.1) * _ :.1}",end='\r')
             # Time for the relay to settle
             self.time.sleep(self.relay_settle_time)
             # Toggle relay OFF
