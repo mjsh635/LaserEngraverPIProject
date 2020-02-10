@@ -134,4 +134,7 @@ class RPIO:
 
 rpi = RPIO()
 rpi.set_value(53.2)
+rpi.set_value(99.9)
+rpi.set_value(12.9)
+rpi.set_value(87.4)
 
