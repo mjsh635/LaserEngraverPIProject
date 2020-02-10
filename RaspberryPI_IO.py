@@ -34,6 +34,7 @@ class RPIO:
         self.output_pins = [4,17,27,22]
         # Loop over the pin array setting each pin
         # to an output as it goes
+        for pin in self.output_pins:
             self.GPIO.setup(pin, self.GPIO.OUT)
 
     def _home_settings(self):
@@ -104,18 +105,33 @@ class RPIO:
         """Set the power level desired and return if
         completed successfully
         """
+        self.target = target
+
         # count tens and then subtract from total
+        tens_to_add = int(self.target / 10)
+        self.target -= tens_to_add * 10
+
         #count remaining ones then subtract from total
+        ones_to_add = int(self.target / 1)
+        self.target -= ones_to_add
+
         #remainder should be point ones
+        pnt_ones_to_add = int(self.target / 0.1)
+
         #call the functions for their values
+        rpi._home_settings()
+        rpi._add_10_percent(tens_to_add)
+        rpi._add_1_percent(ones_to_add)
+        rpi._add_point_1_percent(pnt_ones_to_add)
+
         #if completed okay then set last set value
+        self.last_set_value = target
         #This should be change, return true if
         #completed okay
+        completed_successfully = True
+        return completed_successfully
 
 
 rpi = RPIO()
-rpi._home_settings()
-rpi._add_10_percent(5)
-rpi._add_1_percent(5)
-rpi._add_point_1_percent(5)
+rpi.set_value(53.2)
 
