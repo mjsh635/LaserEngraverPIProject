@@ -119,10 +119,10 @@ class RPIO:
         pnt_ones_to_add = int(self.target / 0.1)
 
         #call the functions for their values
-        rpi._home_settings()
-        rpi._add_10_percent(tens_to_add)
-        rpi._add_1_percent(ones_to_add)
-        rpi._add_point_1_percent(pnt_ones_to_add)
+        self._home_settings()
+        self._add_10_percent(tens_to_add)
+        self._add_1_percent(ones_to_add)
+        self._add_point_1_percent(pnt_ones_to_add)
 
         #if completed okay then set last set value
         self.last_set_value = target
@@ -131,10 +131,4 @@ class RPIO:
         completed_successfully = True
         return completed_successfully
 
-
-rpi = RPIO()
-rpi.set_value(53.2)
-rpi.set_value(99.9)
-rpi.set_value(12.9)
-rpi.set_value(87.4)
 
