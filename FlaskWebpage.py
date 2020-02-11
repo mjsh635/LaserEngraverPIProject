@@ -20,7 +20,6 @@ def start():
 </head>
 <body>
     <h1>SET POWER LEVEL</h1>
-    <form method="POST">
         Desired Power Value: <br>
         <input type="text" name="Power_value">
         <input type="submit",text="Set Power Level">
