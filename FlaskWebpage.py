@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-#from RaspberryPI_IO import RPIO as my_pi
-from Test import test as my_pi
+from RaspberryPI_IO import RPIO as my_pi
 
 app = Flask(__name__)
 
@@ -31,4 +30,4 @@ def start():
     """
 
 
-app.run(debug=True)
+app.run(debug=True,host='192.168.0.252')
