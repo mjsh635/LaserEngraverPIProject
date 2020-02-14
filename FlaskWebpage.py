@@ -7,9 +7,7 @@ app = Flask(__name__)
 def start():
 
     if request.method == "POST":
-        num = 0.0
-        num = float(request.form["Power_value"])
-        my_pi().set_value(num)
+        my_pi().set_value(float(request.form["Power_value"]))
 
     return  """<!DOCTYPE html>
                 <html lang="en">
