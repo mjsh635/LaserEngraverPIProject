@@ -15,10 +15,10 @@ class RPIO:
         """ import the RPIO and set the 
         mode to BCM, then set the mode for 
         the list of pins to output
-        pin 04 => - 10
-        pin 17 => + 10
-        pin 27 => +   1
-        pin 22 => + 0.1
+        pin 04 => - 10 %
+        pin 17 => + 10 %
+        pin 27 => +   1 % 
+        pin 22 => + 0.1 %
         """
         # variables to be used throughout the class
         self.last_set_value = 0.0
